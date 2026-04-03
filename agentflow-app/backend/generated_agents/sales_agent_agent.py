@@ -29,7 +29,7 @@ llm_config = {
 # ── Agent Definition ───────────────────────────────────────────────────
 assistant = autogen.AssistantAgent(
     name="Sales_agent",
-    system_message="""This should try to sale my items""",
+    system_message="""[Business Context: Head is in the Head vertical, generating 10k_50k targeting: Head.]  Sales agent should talk to generate leads""",
     llm_config=llm_config,
 )
 

@@ -135,7 +135,7 @@ def run_market_research(req: ResearchRequest):
             if second_key and "groq" in provider.lower():
                 print(f"Groq Rate Limit/Error encountered. Falling back to Gemini: {e}")
                 try:
-                    report = _execute_pipeline("", second_key, "gemini-1.5-flash-latest", "Google Gemini", None)
+                    report = _execute_pipeline("", second_key, "gemini-2.0-flash", "Google Gemini", None)
                     return {"status": "success", "report": report}
                 except Exception as e2:
                     return {"status": "error", "report": f"Fallback Pipeline Error: {e2}"}
