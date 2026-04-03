@@ -84,7 +84,8 @@ export default function AgentBuilder({ businessContext, onComplete }: Props) {
     }, 800);
 
     try {
-      const response = await fetch('/api/agents/generate', {
+      const apiBase = import.meta.env.VITE_API_URL || '';
+      const response = await fetch(`${apiBase}/api/agents/generate`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

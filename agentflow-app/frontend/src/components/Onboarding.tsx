@@ -36,7 +36,8 @@ export default function Onboarding({ onComplete, onSkip }: OnboardingProps) {
     setIsSubmitting(true);
     const contextStr = `${formData.businessName} is in the ${formData.industry} vertical, generating ${formData.revenue} targeting: ${formData.targetAudience}.`;
     try {
-      const res = await fetch('/api/research', {
+      const apiBase = import.meta.env.VITE_API_URL || '';
+      const res = await fetch(`${apiBase}/api/research`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ business_context: contextStr }),
