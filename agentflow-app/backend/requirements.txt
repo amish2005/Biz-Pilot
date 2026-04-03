@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+gunicorn
+python-dotenv
+pyautogen
+pydantic
+crewai>=0.28.8
+google-generativeai
+litellm
+requests
