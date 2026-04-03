@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ArrowRight, Bot, Code, Layout, Boxes, Inbox, Laptop, Send, Share2, User, Cpu, Database, Server, FileText } from 'lucide-react';
+import { ArrowRight, Bot, Code, Layout, Boxes, Laptop, Share2, User, Cpu, Database, Server, FileText } from 'lucide-react';
 import type { WorkflowGraph } from '../types';
 
 interface Props {
